@@ -3,7 +3,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    //MARK: - Varyable
+    //MARK: - Variable
     
     let softEgg = UIButton()
     let mediumEgg = UIButton()
