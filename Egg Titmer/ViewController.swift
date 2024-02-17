@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         stop.setTitle("STOP", for: .normal)
         stop.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         stop.setTitleColor(.black, for: .normal)
-        stop.layer.cornerRadius = 5
+        stop.layer.cornerRadius = 6
         stop.isHidden = true
         
         let _: () = NSLayoutConstraint(item: stop, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
