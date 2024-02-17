@@ -125,7 +125,7 @@ class ViewController: UIViewController {
                 return
             }
             player.play()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 self.timeLabel.text = "CHOOSE"
                 self.audioPlay = false
             })
