@@ -5,7 +5,7 @@ class ViewController: UIViewController {
     
     //MARK: - Variable
     
-    var maxProgress = 0
+    lazy var maxProgress = 0
     let softEgg = UIButton()
     let mediumEgg = UIButton()
     let hardEgg = UIButton()
