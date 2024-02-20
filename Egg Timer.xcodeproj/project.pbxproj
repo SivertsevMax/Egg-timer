@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134628F92B848F3A002A518E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134628F82B848F3A002A518E /* CustomView.swift */; };
 		135D8DB32B7D1D9600CA672F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8DB22B7D1D9600CA672F /* AppDelegate.swift */; };
 		135D8DB52B7D1D9600CA672F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8DB42B7D1D9600CA672F /* SceneDelegate.swift */; };
 		135D8DB72B7D1D9600CA672F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8DB62B7D1D9600CA672F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		134628F82B848F3A002A518E /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		135D8DAF2B7D1D9600CA672F /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		135D8DB22B7D1D9600CA672F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		135D8DB42B7D1D9600CA672F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				135D8DB22B7D1D9600CA672F /* AppDelegate.swift */,
 				135D8DB42B7D1D9600CA672F /* SceneDelegate.swift */,
 				135D8DB62B7D1D9600CA672F /* ViewController.swift */,
+				134628F82B848F3A002A518E /* CustomView.swift */,
 				135D8DBB2B7D1D9900CA672F /* Assets.xcassets */,
 				135D8DBD2B7D1D9900CA672F /* LaunchScreen.storyboard */,
 				135D8DC02B7D1D9900CA672F /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134628F92B848F3A002A518E /* CustomView.swift in Sources */,
 				135D8DB72B7D1D9600CA672F /* ViewController.swift in Sources */,
 				135D8DB32B7D1D9600CA672F /* AppDelegate.swift in Sources */,
 				135D8DB52B7D1D9600CA672F /* SceneDelegate.swift in Sources */,

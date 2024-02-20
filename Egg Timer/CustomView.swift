@@ -1,6 +1,6 @@
 import UIKit
 
-class View: UIView {
+class CustomView: UIView {
     let softEgg = UIButton()
     let mediumEgg = UIButton()
     let hardEgg = UIButton()
@@ -8,7 +8,7 @@ class View: UIView {
     var timeLabel = UILabel()
     var timeProgress = UIProgressView()
     
-    lazy var contentStack: UIStackView = {
+    var eggsStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
@@ -37,15 +37,12 @@ class View: UIView {
         let _: () = NSLayoutConstraint(item: timeProgress, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 5).isActive = true
         
         
-        softEgg.titleLabel?.text = "soft_egg"
-        softEgg.tag = 3
-        softEgg.setImage(UIImage(named: softEgg.titleLabel!.text!), for: .normal)
-         mediumEgg.titleLabel?.text = "medium_egg"
-        mediumEgg.tag = 7
-        mediumEgg.setImage(UIImage(named: mediumEgg.titleLabel!.text!), for: .normal)
-        hardEgg.titleLabel?.text = "hard_egg"
-        hardEgg.tag = 12
-        hardEgg.setImage(UIImage(named: hardEgg.titleLabel!.text!), for: .normal)
+        softEgg.tag = 0
+        softEgg.setImage(UIImage(named: "soft_egg"), for: .normal)
+        mediumEgg.tag = 1
+        mediumEgg.setImage(UIImage(named: "medium_egg"), for: .normal)
+        hardEgg.tag = 2
+        hardEgg.setImage(UIImage(named: "hard_egg"), for: .normal)
         
         let _: () = NSLayoutConstraint(item: timeLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
         let _: () = NSLayoutConstraint(item: timeLabel, attribute: .top, relatedBy: .equal, toItem: self, attribute: .topMargin, multiplier: 1, constant: 50).isActive = true
@@ -67,17 +64,20 @@ class View: UIView {
         let _: () = NSLayoutConstraint(item: stop, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50).isActive = true
     }
     
-    func addStopButtonTarget(_ target: Any?, action: Selector) {
-        stop.addTarget(target, action: action, for: .touchUpInside)
+    func stackSet() {
+        self.addSubview(eggsStack)
+        eggsStack.translatesAutoresizingMaskIntoConstraints = false
+        eggsStack.addArrangedSubview(softEgg)
+        eggsStack.addArrangedSubview(mediumEgg)
+        eggsStack.addArrangedSubview(hardEgg)
+        eggsStack.spacing = 16
+        eggsStack.distribution = .fillEqually
+        
+        NSLayoutConstraint.activate([
+            eggsStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            eggsStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            eggsStack.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0),
+            eggsStack.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.4)
+        ])
     }
-    func addHardButtonTarget(_ target: Any?, action: Selector) {
-        hardEgg.addTarget(target, action: action, for: .touchUpInside)
-    }
-    func addMediumButtonTarget(_ target: Any?, action: Selector) {
-        mediumEgg.addTarget(target, action: action, for: .touchUpInside)
-    }
-    func addSoftButtonTarget(_ target: Any?, action: Selector) {
-        softEgg.addTarget(target, action: action, for: .touchUpInside)
-    }
-    
 }
